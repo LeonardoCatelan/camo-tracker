@@ -127,6 +127,35 @@ export type Database = {
           },
         ]
       }
+      user_weapon_camos: {
+        Row: {
+          completed_at: string
+          slot: Database["public"]["Enums"]["weapon_camo_slot"]
+          user_id: string
+          weapon_id: string
+        }
+        Insert: {
+          completed_at?: string
+          slot: Database["public"]["Enums"]["weapon_camo_slot"]
+          user_id?: string
+          weapon_id: string
+        }
+        Update: {
+          completed_at?: string
+          slot?: Database["public"]["Enums"]["weapon_camo_slot"]
+          user_id?: string
+          weapon_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_weapon_camos_weapon_id_fkey"
+            columns: ["weapon_id"]
+            isOneToOne: false
+            referencedRelation: "weapons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       weapon_categories: {
         Row: {
           id: string
@@ -152,6 +181,7 @@ export type Database = {
           id: string
           name: string
           sort_order: number
+          unlock_level: number | null
         }
         Insert: {
           available_since?: string | null
@@ -159,6 +189,7 @@ export type Database = {
           id: string
           name: string
           sort_order?: number
+          unlock_level?: number | null
         }
         Update: {
           available_since?: string | null
@@ -166,6 +197,7 @@ export type Database = {
           id?: string
           name?: string
           sort_order?: number
+          unlock_level?: number | null
         }
         Relationships: [
           {
@@ -192,6 +224,21 @@ export type Database = {
         | "harmonic_break"
         | "mastery"
         | "divergence"
+      weapon_camo_slot:
+        | "military_1"
+        | "military_2"
+        | "military_3"
+        | "military_4"
+        | "military_5"
+        | "military_6"
+        | "military_7"
+        | "military_8"
+        | "special_1"
+        | "special_2"
+        | "special_3"
+        | "gold"
+        | "platinum"
+        | "harmonic_break"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -326,6 +373,22 @@ export const Constants = {
         "harmonic_break",
         "mastery",
         "divergence",
+      ],
+      weapon_camo_slot: [
+        "military_1",
+        "military_2",
+        "military_3",
+        "military_4",
+        "military_5",
+        "military_6",
+        "military_7",
+        "military_8",
+        "special_1",
+        "special_2",
+        "special_3",
+        "gold",
+        "platinum",
+        "harmonic_break",
       ],
     },
   },

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { ROUTES } from "@/constants/routes";
+import { ROUTES, weaponRoute } from "@/constants/routes";
 import {
   buildLoginPath,
   getSafeRedirectPath,
@@ -10,12 +10,22 @@ import {
 } from "@/lib/utils/routes";
 
 describe("isProtectedRoute", () => {
-  it.each(["/dashboard", "/dashboard/settings", "/update-password"])("protects %s", (path) => {
-    expect(isProtectedRoute(path)).toBe(true);
-  });
+  it.each(["/", "/weapons/axion", "/weapons/axion/dmz", "/stack", "/update-password", "/anything"])(
+    "protects %s (private by default)",
+    (path) => {
+      expect(isProtectedRoute(path)).toBe(true);
+    },
+  );
 
-  it.each(["/", "/login", "/dashboards", "/api/health"])("does not protect %s", (path) => {
-    expect(isProtectedRoute(path)).toBe(false);
+  it.each(["/login", "/sign-up", "/forgot-password", "/auth/confirm", "/auth/error"])(
+    "leaves %s public",
+    (path) => {
+      expect(isProtectedRoute(path)).toBe(false);
+    },
+  );
+
+  it("matches public routes by segment, not by prefix", () => {
+    expect(isProtectedRoute("/login-admin")).toBe(true);
   });
 });
 
@@ -31,9 +41,16 @@ describe("isGuestOnlyRoute", () => {
   });
 });
 
+describe("weaponRoute", () => {
+  it("builds the weapon page path, optionally with a mode", () => {
+    expect(weaponRoute("axion")).toBe("/weapons/axion");
+    expect(weaponRoute("axion", "dmz")).toBe("/weapons/axion/dmz");
+  });
+});
+
 describe("getSafeRedirectPath", () => {
   it("accepts same-origin relative paths", () => {
-    expect(getSafeRedirectPath("/dashboard?tab=1")).toBe("/dashboard?tab=1");
+    expect(getSafeRedirectPath("/weapons/axion?tab=1")).toBe("/weapons/axion?tab=1");
   });
 
   it.each([
@@ -45,11 +62,11 @@ describe("getSafeRedirectPath", () => {
     "/\\evil.com",
     "javascript:alert(1)",
   ])("falls back for unsafe value %s", (value) => {
-    expect(getSafeRedirectPath(value)).toBe(ROUTES.dashboard);
+    expect(getSafeRedirectPath(value)).toBe(ROUTES.home);
   });
 
   it("uses the provided fallback", () => {
-    expect(getSafeRedirectPath("//evil.com", "/")).toBe("/");
+    expect(getSafeRedirectPath("//evil.com", "/login")).toBe("/login");
   });
 });
 
@@ -60,24 +77,25 @@ describe("buildLoginPath", () => {
   });
 
   it("encodes the destination in the `next` parameter", () => {
-    expect(buildLoginPath("/dashboard?tab=1")).toBe("/login?next=%2Fdashboard%3Ftab%3D1");
+    expect(buildLoginPath("/weapons/axion?a=1")).toBe("/login?next=%2Fweapons%2Faxion%3Fa%3D1");
   });
 });
 
 describe("resolveAuthRedirect", () => {
-  it("sends guests on protected routes to login, preserving the destination", () => {
+  it("sends guests to login, preserving the destination", () => {
     expect(
-      resolveAuthRedirect({ pathname: "/dashboard", search: "?a=1", isAuthenticated: false }),
-    ).toBe("/login?next=%2Fdashboard%3Fa%3D1");
+      resolveAuthRedirect({ pathname: "/weapons/axion", search: "?a=1", isAuthenticated: false }),
+    ).toBe("/login?next=%2Fweapons%2Faxion%3Fa%3D1");
+    expect(resolveAuthRedirect({ pathname: "/", isAuthenticated: false })).toBe("/login");
   });
 
   it("sends authenticated users away from guest-only routes", () => {
-    expect(resolveAuthRedirect({ pathname: "/login", isAuthenticated: true })).toBe("/dashboard");
+    expect(resolveAuthRedirect({ pathname: "/login", isAuthenticated: true })).toBe("/");
   });
 
-  it("lets other requests through", () => {
-    expect(resolveAuthRedirect({ pathname: "/", isAuthenticated: false })).toBeNull();
-    expect(resolveAuthRedirect({ pathname: "/dashboard", isAuthenticated: true })).toBeNull();
+  it("lets allowed requests through", () => {
+    expect(resolveAuthRedirect({ pathname: "/", isAuthenticated: true })).toBeNull();
     expect(resolveAuthRedirect({ pathname: "/login", isAuthenticated: false })).toBeNull();
+    expect(resolveAuthRedirect({ pathname: "/auth/confirm", isAuthenticated: false })).toBeNull();
   });
 });

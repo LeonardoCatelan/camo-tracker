@@ -75,9 +75,21 @@ pnpm db:types:local  # gera os tipos a partir do banco local
 pnpm db:stop
 ```
 
+### Migrations
+
+A estrutura do banco fica versionada em [supabase/migrations](supabase/migrations):
+
+| Migration                                           | Conteúdo                                                                                                                                 |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `20261123000000_catalog_and_challenge_progress.sql` | Catálogo (modos, categorias, armas, desafios), progresso por desafio (usado pelas maestrias) e o importador `private.import_mw4_catalog` |
+| `20261123000100_user_weapon_camos.sql`              | Camuflagens concluídas por arma (valem para todos os modos)                                                                              |
+| `20261123000200_weapon_unlock_level.sql`            | Nível de desbloqueio das armas (ordenação dentro da categoria) e importador atualizado                                                   |
+
+Para aplicar no projeto vinculado: `pnpm exec supabase db push`. O catálogo é carregado com o importador a partir de [data/mw4-camos.json](data/mw4-camos.json) e fica em cache no servidor por até 1 hora.
+
 ### Tipos do banco
 
-[src/types/database.types.ts](src/types/database.types.ts) começa como um placeholder no mesmo formato gerado pelo Supabase CLI. Depois de criar tabelas (por migrations em `supabase/migrations`), rode `pnpm db:types` ou `pnpm db:types:local`. Os clientes Supabase já são tipados com `Database`, então consultas como `supabase.from("tabela")` passam a ter autocomplete e checagem de tipos.
+[src/types/database.types.ts](src/types/database.types.ts) segue o formato gerado pelo Supabase CLI. Depois de alterar o banco, rode `pnpm db:types` (ou `pnpm db:types:local`). Os clientes Supabase são tipados com `Database`, então consultas como `supabase.from("tabela")` têm autocomplete e checagem de tipos.
 
 ## Executando localmente
 

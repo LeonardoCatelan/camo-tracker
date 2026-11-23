@@ -1,10 +1,10 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("Proteção de rotas", () => {
-  test("redireciona visitantes do painel para o login preservando o destino", async ({ page }) => {
-    await page.goto("/dashboard");
+  test("redireciona visitantes para o login preservando o destino", async ({ page }) => {
+    await page.goto("/weapons/axion");
 
-    await expect(page).toHaveURL("/login?next=%2Fdashboard");
+    await expect(page).toHaveURL("/login?next=%2Fweapons%2Faxion");
     await expect(page.getByRole("heading", { name: "Entrar" })).toBeVisible();
   });
 

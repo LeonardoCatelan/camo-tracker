@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   CheckCircle2,
   Database,
@@ -54,7 +55,9 @@ const STACK: readonly StackItem[] = [
   },
 ];
 
-export default function HomePage() {
+export const metadata: Metadata = { title: "Stack do projeto", robots: { index: false } };
+
+export default function StackPage() {
   return (
     <>
       <SiteHeader
@@ -76,7 +79,7 @@ export default function HomePage() {
             <LinkButton href={ROUTES.signUp} size="lg">
               Criar conta
             </LinkButton>
-            <LinkButton href={ROUTES.dashboard} size="lg" variant="outline">
+            <LinkButton href={ROUTES.home} size="lg" variant="outline">
               <LogIn aria-hidden />
               Acessar painel
             </LinkButton>

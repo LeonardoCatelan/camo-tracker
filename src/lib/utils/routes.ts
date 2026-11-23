@@ -1,7 +1,7 @@
 import {
   DEFAULT_AUTHENTICATED_ROUTE,
   GUEST_ONLY_ROUTES,
-  PROTECTED_ROUTES,
+  PUBLIC_ROUTES,
   REDIRECT_QUERY_PARAM,
   ROUTES,
 } from "@/constants/routes";
@@ -10,8 +10,9 @@ function matchesRoute(pathname: string, route: string): boolean {
   return pathname === route || pathname.startsWith(`${route}/`);
 }
 
+/** Private by default: only the routes listed in PUBLIC_ROUTES are open to guests. */
 export function isProtectedRoute(pathname: string): boolean {
-  return PROTECTED_ROUTES.some((route) => matchesRoute(pathname, route));
+  return !PUBLIC_ROUTES.some((route) => matchesRoute(pathname, route));
 }
 
 export function isGuestOnlyRoute(pathname: string): boolean {

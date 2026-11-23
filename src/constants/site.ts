@@ -1,4 +1,4 @@
 export const SITE_CONFIG = {
   name: "Camo Tracker",
-  description: "Aplicação Next.js + Supabase pronta para o desenvolvimento de funcionalidades.",
+  description: "Acompanhe o seu grind de camuflagens no Modern Warfare 4.",
 } as const;

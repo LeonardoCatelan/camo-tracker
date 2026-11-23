@@ -10,7 +10,7 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ actions }: SiteHeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-40 border-b-2 border-olive/50 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
       <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Logo />
         <div className="flex items-center gap-1 sm:gap-2">

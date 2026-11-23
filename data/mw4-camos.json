@@ -13,13 +13,15 @@
     "Nomes dos camos estão em inglês, como aparecem nas fontes; descrições traduzidas.",
     "Campos 'id' são estáveis e servem como chave no tracker; 'concluido' começa como false.",
     "Armas marcadas com 'disponivelDesde: Temporada 1' não fazem parte das 33 armas de lançamento.",
-    "Dados compilados de sites da comunidade; confira no jogo os itens com 'observacao'."
+    "Dados compilados de sites da comunidade; confira no jogo os itens com 'observacao'.",
+    "'nivelDesbloqueio' é o nível de jogador que libera a arma; null nas armas da Temporada 1 (ainda não divulgado)."
   ],
   "fontes": [
     "https://metaradar.gg/modernwarfare4/camos",
     "https://upblazed.com/tools/mw4-camo-tracker",
     "https://codmunity.gg/camo-tracker/guide/mw4",
-    "https://conquestcapped.com/guides/call-of-duty/mw4-camos/"
+    "https://conquestcapped.com/guides/call-of-duty/mw4-camos/",
+    "https://conquestcapped.com/guides/call-of-duty/mw4-weapons/"
   ],
   "modos": {
     "multiplayer": {
@@ -33,6 +35,7 @@
             {
               "id": "axion",
               "nome": "Axion",
+              "nivelDesbloqueio": 52,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.axion.cyan",
@@ -87,6 +90,7 @@
             {
               "id": "han-86",
               "nome": "Han 86",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.han-86.smoke",
@@ -141,6 +145,7 @@
             {
               "id": "m4",
               "nome": "M4",
+              "nivelDesbloqueio": 14,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.m4.myriad",
@@ -195,6 +200,7 @@
             {
               "id": "hyeon-burst",
               "nome": "Hyeon Burst",
+              "nivelDesbloqueio": 21,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.hyeon-burst.ponderosa",
@@ -249,6 +255,7 @@
             {
               "id": "kastov-762",
               "nome": "Kastov 762",
+              "nivelDesbloqueio": 34,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.kastov-762.samnim",
@@ -303,6 +310,7 @@
             {
               "id": "patriot-xmr",
               "nome": "Patriot XMR",
+              "nivelDesbloqueio": 27,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.patriot-xmr.dune-sea",
@@ -357,6 +365,7 @@
             {
               "id": "oden",
               "nome": "Oden",
+              "nivelDesbloqueio": 39,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.oden.dark-moss",
@@ -411,6 +420,7 @@
             {
               "id": "cronen-squall",
               "nome": "Cronen Squall",
+              "nivelDesbloqueio": 55,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.cronen-squall.oni",
@@ -466,6 +476,7 @@
               "id": "cronen-osprey",
               "nome": "Cronen Osprey",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.cronen-osprey.chained",
@@ -526,6 +537,7 @@
             {
               "id": "iso-nightshade",
               "nome": "ISO Nightshade",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.iso-nightshade.asphalt",
@@ -580,6 +592,7 @@
             {
               "id": "ppsh-41",
               "nome": "PPSh-41",
+              "nivelDesbloqueio": 30,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.ppsh-41.blackwell",
@@ -634,6 +647,7 @@
             {
               "id": "x-58-nyx",
               "nome": "X-58 Nyx",
+              "nivelDesbloqueio": 46,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.x-58-nyx.sniper-veil",
@@ -688,6 +702,7 @@
             {
               "id": "vel-46",
               "nome": "VEL 46",
+              "nivelDesbloqueio": 5,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.vel-46.jungle-shadow",
@@ -742,6 +757,7 @@
             {
               "id": "wz-55-striga",
               "nome": "WZ.55 Striga",
+              "nivelDesbloqueio": 18,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.wz-55-striga.stellation",
@@ -797,6 +813,7 @@
               "id": "csg-35",
               "nome": "CSG-35",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.csg-35.black-grip",
@@ -857,6 +874,7 @@
             {
               "id": "rezi-12",
               "nome": "Rezi 12",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.rezi-12.struck-oil",
@@ -911,6 +929,7 @@
             {
               "id": "warlord",
               "nome": "Warlord",
+              "nivelDesbloqueio": 32,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.warlord.redshift",
@@ -966,6 +985,7 @@
               "id": "jak-12",
               "nome": "JAK 12",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.jak-12.especial-1",
@@ -1029,6 +1049,7 @@
             {
               "id": "finn-lmg",
               "nome": "FiNN LMG",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.finn-lmg.desert-tactics",
@@ -1083,6 +1104,7 @@
             {
               "id": "type-73",
               "nome": "Type 73",
+              "nivelDesbloqueio": 9,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.type-73.ash-pine",
@@ -1137,6 +1159,7 @@
             {
               "id": "apoc-338",
               "nome": "APOC-338",
+              "nivelDesbloqueio": 44,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.apoc-338.mineral",
@@ -1197,6 +1220,7 @@
             {
               "id": "mar-9",
               "nome": "MAR-9",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.mar-9.mangrove",
@@ -1251,6 +1275,7 @@
             {
               "id": "oris-8-6",
               "nome": "Oris 8.6",
+              "nivelDesbloqueio": 11,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.oris-8-6.hibiscus",
@@ -1305,6 +1330,7 @@
             {
               "id": "mosin-nagant",
               "nome": "Mosin-Nagant",
+              "nivelDesbloqueio": 36,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.mosin-nagant.ice-sheer",
@@ -1365,6 +1391,7 @@
             {
               "id": "kg-7-vulcan",
               "nome": "KG-7 Vulcan",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.kg-7-vulcan.treeline",
@@ -1419,6 +1446,7 @@
             {
               "id": "signal-50",
               "nome": "Signal 50",
+              "nivelDesbloqueio": 50,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.signal-50.anaconda",
@@ -1473,6 +1501,7 @@
             {
               "id": "astaroth-57",
               "nome": "Astaroth .57",
+              "nivelDesbloqueio": 25,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.astaroth-57.backcountry",
@@ -1533,6 +1562,7 @@
             {
               "id": "sang-9mm",
               "nome": "SANG 9mm",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.sang-9mm.autumn",
@@ -1587,6 +1617,7 @@
             {
               "id": "krait-p68",
               "nome": "Krait P68",
+              "nivelDesbloqueio": 7,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.krait-p68.off-grid",
@@ -1641,6 +1672,7 @@
             {
               "id": "50-gs",
               "nome": ".50 GS",
+              "nivelDesbloqueio": 41,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.50-gs.frosted",
@@ -1695,6 +1727,7 @@
             {
               "id": "mojave-357",
               "nome": "Mojave .357",
+              "nivelDesbloqueio": 48,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.mojave-357.miami",
@@ -1755,6 +1788,7 @@
             {
               "id": "pila",
               "nome": "PILA",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.pila.frontier",
@@ -1809,6 +1843,7 @@
             {
               "id": "rpg-8",
               "nome": "RPG-8",
+              "nivelDesbloqueio": 23,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.rpg-8.digi-bark",
@@ -1863,6 +1898,7 @@
             {
               "id": "jokr",
               "nome": "JOKR",
+              "nivelDesbloqueio": 43,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.jokr.thicket",
@@ -1917,6 +1953,7 @@
             {
               "id": "pm-40-anvil",
               "nome": "PM-40 Anvil",
+              "nivelDesbloqueio": 54,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.pm-40-anvil.night-snow",
@@ -1977,6 +2014,7 @@
             {
               "id": "fss-carbon-edge-1095",
               "nome": "FSS Carbon Edge 1095",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.fss-carbon-edge-1095.raster-lite",
@@ -2032,6 +2070,7 @@
               "id": "zlr-talonhawk",
               "nome": "ZLR Talonhawk",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "multiplayer.zlr-talonhawk.especial-1",
@@ -2101,6 +2140,7 @@
             {
               "id": "axion",
               "nome": "Axion",
+              "nivelDesbloqueio": 52,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.axion.cyan",
@@ -2155,6 +2195,7 @@
             {
               "id": "han-86",
               "nome": "Han 86",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.han-86.smoke",
@@ -2209,6 +2250,7 @@
             {
               "id": "m4",
               "nome": "M4",
+              "nivelDesbloqueio": 14,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.m4.myriad",
@@ -2263,6 +2305,7 @@
             {
               "id": "hyeon-burst",
               "nome": "Hyeon Burst",
+              "nivelDesbloqueio": 21,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.hyeon-burst.ponderosa",
@@ -2317,6 +2360,7 @@
             {
               "id": "kastov-762",
               "nome": "Kastov 762",
+              "nivelDesbloqueio": 34,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.kastov-762.samnim",
@@ -2371,6 +2415,7 @@
             {
               "id": "patriot-xmr",
               "nome": "Patriot XMR",
+              "nivelDesbloqueio": 27,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.patriot-xmr.dune-sea",
@@ -2425,6 +2470,7 @@
             {
               "id": "oden",
               "nome": "Oden",
+              "nivelDesbloqueio": 39,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.oden.dark-moss",
@@ -2479,6 +2525,7 @@
             {
               "id": "cronen-squall",
               "nome": "Cronen Squall",
+              "nivelDesbloqueio": 55,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.cronen-squall.oni",
@@ -2534,6 +2581,7 @@
               "id": "cronen-osprey",
               "nome": "Cronen Osprey",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.cronen-osprey.chained",
@@ -2595,6 +2643,7 @@
             {
               "id": "iso-nightshade",
               "nome": "ISO Nightshade",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.iso-nightshade.asphalt",
@@ -2649,6 +2698,7 @@
             {
               "id": "ppsh-41",
               "nome": "PPSh-41",
+              "nivelDesbloqueio": 30,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.ppsh-41.blackwell",
@@ -2703,6 +2753,7 @@
             {
               "id": "x-58-nyx",
               "nome": "X-58 Nyx",
+              "nivelDesbloqueio": 46,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.x-58-nyx.sniper-veil",
@@ -2757,6 +2808,7 @@
             {
               "id": "vel-46",
               "nome": "VEL 46",
+              "nivelDesbloqueio": 5,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.vel-46.jungle-shadow",
@@ -2811,6 +2863,7 @@
             {
               "id": "wz-55-striga",
               "nome": "WZ.55 Striga",
+              "nivelDesbloqueio": 18,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.wz-55-striga.stellation",
@@ -2866,6 +2919,7 @@
               "id": "csg-35",
               "nome": "CSG-35",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.csg-35.black-grip",
@@ -2926,6 +2980,7 @@
             {
               "id": "rezi-12",
               "nome": "Rezi 12",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.rezi-12.struck-oil",
@@ -2980,6 +3035,7 @@
             {
               "id": "warlord",
               "nome": "Warlord",
+              "nivelDesbloqueio": 32,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.warlord.redshift",
@@ -3035,6 +3091,7 @@
               "id": "jak-12",
               "nome": "JAK 12",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.jak-12.especial-1",
@@ -3098,6 +3155,7 @@
             {
               "id": "finn-lmg",
               "nome": "FiNN LMG",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.finn-lmg.desert-tactics",
@@ -3152,6 +3210,7 @@
             {
               "id": "type-73",
               "nome": "Type 73",
+              "nivelDesbloqueio": 9,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.type-73.ash-pine",
@@ -3206,6 +3265,7 @@
             {
               "id": "apoc-338",
               "nome": "APOC-338",
+              "nivelDesbloqueio": 44,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.apoc-338.mineral",
@@ -3266,6 +3326,7 @@
             {
               "id": "mar-9",
               "nome": "MAR-9",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.mar-9.mangrove",
@@ -3320,6 +3381,7 @@
             {
               "id": "oris-8-6",
               "nome": "Oris 8.6",
+              "nivelDesbloqueio": 11,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.oris-8-6.hibiscus",
@@ -3374,6 +3436,7 @@
             {
               "id": "mosin-nagant",
               "nome": "Mosin-Nagant",
+              "nivelDesbloqueio": 36,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.mosin-nagant.ice-sheer",
@@ -3435,6 +3498,7 @@
             {
               "id": "kg-7-vulcan",
               "nome": "KG-7 Vulcan",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.kg-7-vulcan.treeline",
@@ -3489,6 +3553,7 @@
             {
               "id": "signal-50",
               "nome": "Signal 50",
+              "nivelDesbloqueio": 50,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.signal-50.anaconda",
@@ -3546,6 +3611,7 @@
             {
               "id": "astaroth-57",
               "nome": "Astaroth .57",
+              "nivelDesbloqueio": 25,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.astaroth-57.backcountry",
@@ -3606,6 +3672,7 @@
             {
               "id": "sang-9mm",
               "nome": "SANG 9mm",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.sang-9mm.autumn",
@@ -3660,6 +3727,7 @@
             {
               "id": "krait-p68",
               "nome": "Krait P68",
+              "nivelDesbloqueio": 7,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.krait-p68.off-grid",
@@ -3714,6 +3782,7 @@
             {
               "id": "50-gs",
               "nome": ".50 GS",
+              "nivelDesbloqueio": 41,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.50-gs.frosted",
@@ -3768,6 +3837,7 @@
             {
               "id": "mojave-357",
               "nome": "Mojave .357",
+              "nivelDesbloqueio": 48,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.mojave-357.miami",
@@ -3828,6 +3898,7 @@
             {
               "id": "pila",
               "nome": "PILA",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.pila.frontier",
@@ -3883,6 +3954,7 @@
             {
               "id": "rpg-8",
               "nome": "RPG-8",
+              "nivelDesbloqueio": 23,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.rpg-8.digi-bark",
@@ -3937,6 +4009,7 @@
             {
               "id": "jokr",
               "nome": "JOKR",
+              "nivelDesbloqueio": 43,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.jokr.thicket",
@@ -3991,6 +4064,7 @@
             {
               "id": "pm-40-anvil",
               "nome": "PM-40 Anvil",
+              "nivelDesbloqueio": 54,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.pm-40-anvil.night-snow",
@@ -4051,6 +4125,7 @@
             {
               "id": "fss-carbon-edge-1095",
               "nome": "FSS Carbon Edge 1095",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.fss-carbon-edge-1095.raster-lite",
@@ -4106,6 +4181,7 @@
               "id": "zlr-talonhawk",
               "nome": "ZLR Talonhawk",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "dmz.zlr-talonhawk.especial-1",
@@ -4175,6 +4251,7 @@
             {
               "id": "axion",
               "nome": "Axion",
+              "nivelDesbloqueio": 52,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.axion.cyan",
@@ -4229,6 +4306,7 @@
             {
               "id": "han-86",
               "nome": "Han 86",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.han-86.smoke",
@@ -4283,6 +4361,7 @@
             {
               "id": "m4",
               "nome": "M4",
+              "nivelDesbloqueio": 14,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.m4.myriad",
@@ -4337,6 +4416,7 @@
             {
               "id": "hyeon-burst",
               "nome": "Hyeon Burst",
+              "nivelDesbloqueio": 21,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.hyeon-burst.ponderosa",
@@ -4391,6 +4471,7 @@
             {
               "id": "kastov-762",
               "nome": "Kastov 762",
+              "nivelDesbloqueio": 34,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.kastov-762.samnim",
@@ -4445,6 +4526,7 @@
             {
               "id": "patriot-xmr",
               "nome": "Patriot XMR",
+              "nivelDesbloqueio": 27,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.patriot-xmr.dune-sea",
@@ -4499,6 +4581,7 @@
             {
               "id": "oden",
               "nome": "Oden",
+              "nivelDesbloqueio": 39,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.oden.dark-moss",
@@ -4553,6 +4636,7 @@
             {
               "id": "cronen-squall",
               "nome": "Cronen Squall",
+              "nivelDesbloqueio": 55,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.cronen-squall.oni",
@@ -4608,6 +4692,7 @@
               "id": "cronen-osprey",
               "nome": "Cronen Osprey",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.cronen-osprey.chained",
@@ -4668,6 +4753,7 @@
             {
               "id": "iso-nightshade",
               "nome": "ISO Nightshade",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.iso-nightshade.asphalt",
@@ -4722,6 +4808,7 @@
             {
               "id": "ppsh-41",
               "nome": "PPSh-41",
+              "nivelDesbloqueio": 30,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.ppsh-41.blackwell",
@@ -4776,6 +4863,7 @@
             {
               "id": "x-58-nyx",
               "nome": "X-58 Nyx",
+              "nivelDesbloqueio": 46,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.x-58-nyx.sniper-veil",
@@ -4830,6 +4918,7 @@
             {
               "id": "vel-46",
               "nome": "VEL 46",
+              "nivelDesbloqueio": 5,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.vel-46.jungle-shadow",
@@ -4884,6 +4973,7 @@
             {
               "id": "wz-55-striga",
               "nome": "WZ.55 Striga",
+              "nivelDesbloqueio": 18,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.wz-55-striga.stellation",
@@ -4939,6 +5029,7 @@
               "id": "csg-35",
               "nome": "CSG-35",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.csg-35.black-grip",
@@ -4999,6 +5090,7 @@
             {
               "id": "rezi-12",
               "nome": "Rezi 12",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.rezi-12.struck-oil",
@@ -5053,6 +5145,7 @@
             {
               "id": "warlord",
               "nome": "Warlord",
+              "nivelDesbloqueio": 32,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.warlord.redshift",
@@ -5108,6 +5201,7 @@
               "id": "jak-12",
               "nome": "JAK 12",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.jak-12.especial-1",
@@ -5171,6 +5265,7 @@
             {
               "id": "finn-lmg",
               "nome": "FiNN LMG",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.finn-lmg.desert-tactics",
@@ -5225,6 +5320,7 @@
             {
               "id": "type-73",
               "nome": "Type 73",
+              "nivelDesbloqueio": 9,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.type-73.ash-pine",
@@ -5279,6 +5375,7 @@
             {
               "id": "apoc-338",
               "nome": "APOC-338",
+              "nivelDesbloqueio": 44,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.apoc-338.mineral",
@@ -5339,6 +5436,7 @@
             {
               "id": "mar-9",
               "nome": "MAR-9",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.mar-9.mangrove",
@@ -5393,6 +5491,7 @@
             {
               "id": "oris-8-6",
               "nome": "Oris 8.6",
+              "nivelDesbloqueio": 11,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.oris-8-6.hibiscus",
@@ -5447,6 +5546,7 @@
             {
               "id": "mosin-nagant",
               "nome": "Mosin-Nagant",
+              "nivelDesbloqueio": 36,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.mosin-nagant.ice-sheer",
@@ -5507,6 +5607,7 @@
             {
               "id": "kg-7-vulcan",
               "nome": "KG-7 Vulcan",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.kg-7-vulcan.treeline",
@@ -5561,6 +5662,7 @@
             {
               "id": "signal-50",
               "nome": "Signal 50",
+              "nivelDesbloqueio": 50,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.signal-50.anaconda",
@@ -5615,6 +5717,7 @@
             {
               "id": "astaroth-57",
               "nome": "Astaroth .57",
+              "nivelDesbloqueio": 25,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.astaroth-57.backcountry",
@@ -5675,6 +5778,7 @@
             {
               "id": "sang-9mm",
               "nome": "SANG 9mm",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.sang-9mm.autumn",
@@ -5729,6 +5833,7 @@
             {
               "id": "krait-p68",
               "nome": "Krait P68",
+              "nivelDesbloqueio": 7,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.krait-p68.off-grid",
@@ -5784,6 +5889,7 @@
             {
               "id": "50-gs",
               "nome": ".50 GS",
+              "nivelDesbloqueio": 41,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.50-gs.frosted",
@@ -5838,6 +5944,7 @@
             {
               "id": "mojave-357",
               "nome": "Mojave .357",
+              "nivelDesbloqueio": 48,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.mojave-357.miami",
@@ -5898,6 +6005,7 @@
             {
               "id": "pila",
               "nome": "PILA",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.pila.frontier",
@@ -5952,6 +6060,7 @@
             {
               "id": "rpg-8",
               "nome": "RPG-8",
+              "nivelDesbloqueio": 23,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.rpg-8.digi-bark",
@@ -6006,6 +6115,7 @@
             {
               "id": "jokr",
               "nome": "JOKR",
+              "nivelDesbloqueio": 43,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.jokr.thicket",
@@ -6060,6 +6170,7 @@
             {
               "id": "pm-40-anvil",
               "nome": "PM-40 Anvil",
+              "nivelDesbloqueio": 54,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.pm-40-anvil.night-snow",
@@ -6120,6 +6231,7 @@
             {
               "id": "fss-carbon-edge-1095",
               "nome": "FSS Carbon Edge 1095",
+              "nivelDesbloqueio": 4,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.fss-carbon-edge-1095.raster-lite",
@@ -6175,6 +6287,7 @@
               "id": "zlr-talonhawk",
               "nome": "ZLR Talonhawk",
               "disponivelDesde": "Temporada 1",
+              "nivelDesbloqueio": null,
               "desafiosEspeciais": [
                 {
                   "id": "warzone.zlr-talonhawk.especial-1",
