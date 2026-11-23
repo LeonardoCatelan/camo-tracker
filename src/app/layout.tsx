@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Barlow, Saira_Condensed, Share_Tech_Mono } from "next/font/google";
 import { type ReactNode } from "react";
 
@@ -21,6 +21,14 @@ const fontDisplay = Saira_Condensed({
   weight: ["600", "700", "800"],
 });
 const fontHud = Share_Tech_Mono({ variable: "--font-hud", subsets: ["latin"], weight: "400" });
+
+/** Mobile browser chrome follows the app palette (sand / graphite). */
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f0ebdd" },
+    { media: "(prefers-color-scheme: dark)", color: "#161813" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: { default: SITE_CONFIG.name, template: `%s | ${SITE_CONFIG.name}` },

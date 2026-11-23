@@ -59,6 +59,8 @@
  * grafite/preto (fundos) e âmbar (progresso e destaques).
  */
 :root {
+  /* Altura do cabeçalho fixo (h-14 + borda de 2px); usada por elementos "sticky". */
+  --header-height: calc(3.5rem + 2px);
   /* Tema claro: "areia" */
   --background: oklch(0.95 0.018 92);
   --foreground: oklch(0.22 0.012 115);
@@ -148,6 +150,18 @@
   }
   html {
     @apply font-sans;
+    /* Sem o flash azul do toque no Android/iOS; o feedback vem dos próprios controles. */
+    -webkit-tap-highlight-color: transparent;
+    /* Âncoras e rolagem respeitam o cabeçalho fixo. */
+    scroll-padding-top: var(--header-height);
+  }
+  /* Toque rápido: sem o atraso de "toque duplo para zoom" em controles. */
+  a,
+  button,
+  input,
+  label,
+  [role="tab"] {
+    touch-action: manipulation;
   }
 }
 

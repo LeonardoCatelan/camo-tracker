@@ -103,7 +103,8 @@ export function WeaponCamoSections({ weapon, mode, challenges }: WeaponCamoSecti
           done={count(MILITARY_SLOTS)}
           total={MILITARY_SLOTS.length}
         />
-        <div className="flex flex-wrap gap-2">
+        {/* Fixed 4×2 grid on phones (no ragged last row); free flow from `sm` up. */}
+        <div className="grid grid-cols-4 gap-2 sm:flex sm:flex-wrap">
           {MILITARY_SLOTS.map((slot) => (
             <CamoToggle
               key={slot}
@@ -111,6 +112,7 @@ export function WeaponCamoSections({ weapon, mode, challenges }: WeaponCamoSecti
               slot={slot}
               name={getSlotLabel(slot)}
               context={weapon.name}
+              className="w-full sm:w-[4.75rem]"
             />
           ))}
         </div>

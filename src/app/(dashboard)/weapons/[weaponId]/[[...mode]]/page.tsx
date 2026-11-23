@@ -66,7 +66,9 @@ async function WeaponContent({
         <header className="flex flex-col gap-2">
           <p className="tape-label w-fit">{category.name}</p>
           <div className="flex flex-wrap items-baseline gap-3">
-            <h1 className="font-display-caps text-4xl font-extrabold sm:text-5xl">{weapon.name}</h1>
+            <h1 className="min-w-0 font-display-caps text-4xl font-extrabold break-words sm:text-5xl">
+              {weapon.name}
+            </h1>
             {weapon.availableSince && (
               <span className="rounded-[2px] border border-olive/60 px-1.5 font-hud text-xs text-olive">
                 {weapon.availableSince}

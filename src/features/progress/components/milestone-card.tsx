@@ -29,16 +29,18 @@ export function MilestoneCard({ milestone, code, eyebrow, primary = false }: Mil
         {code} <span className="text-highlight-ink">{"//"}</span> {eyebrow}
       </p>
 
-      <div className="flex items-center gap-4">
+      {/* Phones: icon + title on the first row, counter on its own row (always the same
+          shape, whatever the milestone name). From `sm` up, the counter sits on the right. */}
+      <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-4 gap-y-3 sm:grid-cols-[auto_minmax(0,1fr)_auto]">
         <CamoIcon
           name={milestone.label}
           variant={milestone.key}
-          className={cn("size-14 ring-1 ring-border", primary && "sm:size-16")}
+          className={cn("size-12 ring-1 ring-border sm:size-14", primary && "sm:size-16")}
         />
-        <div className="min-w-0 flex-1">
+        <div className="min-w-0">
           <h2
             className={cn(
-              "font-display-caps leading-none font-extrabold",
+              "font-display-caps leading-none font-extrabold break-words",
               primary ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl",
             )}
           >
@@ -48,12 +50,12 @@ export function MilestoneCard({ milestone, code, eyebrow, primary = false }: Mil
             {milestone.label} em {milestone.requiredWeapons} armas
           </p>
         </div>
-        <p className="text-right font-hud leading-none">
+        <p className="col-span-2 flex items-baseline gap-1 font-hud leading-none sm:col-span-1 sm:block sm:text-right">
           <span className={cn("text-highlight-ink", primary ? "text-5xl" : "text-4xl")}>
             {milestone.completedWeapons}
           </span>
           <span className="text-xl text-muted-foreground">/{milestone.requiredWeapons}</span>
-          <span className="mt-1 block text-[11px] tracking-widest text-muted-foreground uppercase">
+          <span className="ml-1 text-[11px] tracking-widest text-muted-foreground uppercase sm:mt-1 sm:ml-0 sm:block">
             armas
           </span>
         </p>
@@ -66,7 +68,7 @@ export function MilestoneCard({ milestone, code, eyebrow, primary = false }: Mil
         className={primary ? "h-4" : "h-3"}
       />
 
-      <div className="flex flex-wrap items-center justify-between gap-2 font-hud text-sm">
+      <div className="flex flex-col gap-1 font-hud text-sm sm:flex-row sm:items-center sm:justify-between sm:gap-2">
         <span>
           <span className="text-highlight-ink">{milestone.percent}%</span>
           <span className="text-muted-foreground"> concluído</span>

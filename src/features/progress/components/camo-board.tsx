@@ -45,7 +45,7 @@ function WeaponLink({ weapon, className }: { weapon: Weapon; className?: string 
     <Link
       href={weaponRoute(weapon.id)}
       className={cn(
-        "inline-flex min-h-11 items-center gap-1 font-display-caps text-base font-bold hover:text-highlight-ink focus-visible:text-highlight-ink focus-visible:outline-none",
+        "inline-flex min-h-11 min-w-0 items-center gap-1 font-display-caps text-base font-bold break-words hover:text-highlight-ink focus-visible:text-highlight-ink focus-visible:outline-none",
         className,
       )}
     >
@@ -71,17 +71,20 @@ export function CamoBoard({ categories, specialNames }: CamoBoardProps) {
 
   return (
     <Tabs defaultValue="special" className="gap-4">
-      <TabsList className="h-auto! w-full flex-wrap justify-start gap-1 rounded-md border bg-card p-1 sm:w-fit">
-        {TABS.map((tab) => (
-          <TabsTrigger
-            key={tab}
-            value={tab}
-            className="min-h-10 flex-none px-4 font-display-caps text-sm font-bold tracking-wider data-active:bg-primary! data-active:text-primary-foreground!"
-          >
-            {CAMO_TIER_LABELS[tab]}
-          </TabsTrigger>
-        ))}
-      </TabsList>
+      {/* Sticks below the site header, so switching tabs never requires scrolling up. */}
+      <div className="sticky top-(--header-height) z-30 -mx-4 bg-background/95 px-4 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/80 sm:mx-0 sm:px-0">
+        <TabsList className="grid h-auto! w-full grid-cols-4 gap-1 rounded-md border bg-card p-1 sm:inline-flex sm:w-fit">
+          {TABS.map((tab) => (
+            <TabsTrigger
+              key={tab}
+              value={tab}
+              className="min-h-11 min-w-0 px-1 font-display-caps text-xs font-bold tracking-wide sm:flex-none sm:px-4 sm:text-sm sm:tracking-wider data-active:bg-primary! data-active:text-primary-foreground!"
+            >
+              {CAMO_TIER_LABELS[tab]}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </div>
 
       {TABS.map((tab) => {
         const slots: readonly WeaponCamoSlot[] = tab === "special" ? SPECIAL_SLOTS : [tab];
@@ -101,15 +104,17 @@ export function CamoBoard({ categories, specialNames }: CamoBoardProps) {
                 {tab === "special" ? (
                   <ul className="divide-y divide-border/60">
                     {category.weapons.map((weapon) => (
+                      // Same structure for every weapon: name on top and camos in a
+                      // full-width row on phones; side by side from `sm` up.
                       <li
                         key={weapon.id}
-                        className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 py-2"
+                        className="grid gap-1 py-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:gap-4 sm:py-2"
                       >
-                        <span className="flex items-center gap-2">
+                        <span className="flex min-w-0 items-center gap-2">
                           <WeaponLink weapon={weapon} />
                           <SeasonBadge weapon={weapon} />
                         </span>
-                        <span className="flex gap-2">
+                        <span className="grid grid-cols-3 gap-2 sm:flex">
                           {SPECIAL_SLOTS.map((slot) => (
                             <CamoToggle
                               key={slot}
@@ -117,6 +122,7 @@ export function CamoBoard({ categories, specialNames }: CamoBoardProps) {
                               slot={slot}
                               name={specialNames[weapon.id]?.[slot] ?? getSlotLabel(slot)}
                               context={weapon.name}
+                              className="w-full sm:w-[4.75rem]"
                             />
                           ))}
                         </span>
@@ -128,7 +134,7 @@ export function CamoBoard({ categories, specialNames }: CamoBoardProps) {
                     {category.weapons.map((weapon) => (
                       <li
                         key={weapon.id}
-                        className="flex items-center gap-2 rounded-md border bg-card/60 p-1.5 pr-0"
+                        className="flex min-h-16 items-center gap-2 rounded-md border bg-card/60 p-1.5 pr-1"
                       >
                         <CamoToggle
                           weaponId={weapon.id}

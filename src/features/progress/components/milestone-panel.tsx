@@ -71,7 +71,8 @@ export function MilestonePanel({
           </p>
         </div>
       </section>
-      <div className="grid gap-4 md:grid-cols-3">
+      {/* 3 columns only where each card has room for the counter controls. */}
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {modes.map((mode) => (
           <MasteryCard
             key={mode.id}

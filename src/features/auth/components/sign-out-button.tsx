@@ -7,7 +7,7 @@ import { signOutAction } from "../actions/auth.actions";
 export function SignOutButton() {
   return (
     <form action={signOutAction}>
-      <Button type="submit" variant="ghost" size="sm">
+      <Button type="submit" variant="ghost" size="sm" className="h-10 px-3 sm:h-8">
         <LogOut aria-hidden />
         Sair
       </Button>

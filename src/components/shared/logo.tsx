@@ -8,7 +8,7 @@ export function Logo() {
   return (
     <Link
       href={ROUTES.home}
-      className="flex items-center gap-2 focus-visible:ring-[3px] focus-visible:ring-ring/60 focus-visible:outline-none"
+      className="flex min-h-10 items-center gap-2 focus-visible:ring-[3px] focus-visible:ring-ring/60 focus-visible:outline-none"
     >
       <span className="flex size-8 items-center justify-center rounded-[3px] border border-olive bg-primary text-primary-foreground">
         <Crosshair className="size-5" aria-hidden />

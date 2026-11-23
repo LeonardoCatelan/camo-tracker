@@ -118,7 +118,7 @@ function MasteryEditor({ status }: { status: ReturnType<typeof getMasteryStatus>
         >
           <Minus />
         </Button>
-        <label className="flex flex-1 items-baseline justify-center gap-1 font-hud">
+        <label className="flex min-w-0 flex-1 items-baseline justify-center gap-1 font-hud">
           <span className="sr-only">Progresso atual de {name}</span>
           <input
             type="number"
@@ -128,12 +128,15 @@ function MasteryEditor({ status }: { status: ReturnType<typeof getMasteryStatus>
             value={value}
             onChange={(event) => update(event.target.valueAsNumber)}
             className={cn(
-              "w-20 rounded-md border bg-background px-2 py-1 text-center text-2xl text-highlight-ink",
+              // Fits up to 5 digits (e.g. 25000); 24px text also avoids zoom-on-focus in iOS.
+              "w-full max-w-[7.5ch] min-w-0 rounded-md border bg-background px-1.5 py-1 text-center text-2xl text-highlight-ink",
               "[appearance:textfield] focus-visible:ring-[3px] focus-visible:ring-ring/60 focus-visible:outline-none",
               "[&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none",
             )}
           />
-          {target !== null && <span className="text-lg text-muted-foreground">/{target}</span>}
+          {target !== null && (
+            <span className="shrink-0 text-lg text-muted-foreground">/{target}</span>
+          )}
         </label>
         <Button
           type="button"
@@ -147,7 +150,10 @@ function MasteryEditor({ status }: { status: ReturnType<typeof getMasteryStatus>
         </Button>
       </div>
 
-      <p className="flex justify-between font-hud text-xs text-muted-foreground" aria-live="polite">
+      <p
+        className="flex justify-between gap-2 font-hud text-xs text-muted-foreground"
+        aria-live="polite"
+      >
         <span>{live.percent}% concluído</span>
         <span>
           {isSaving ? "Salvando…" : live.isComplete ? "Concluída!" : "Salvo automaticamente"}

@@ -74,7 +74,7 @@ export function CamoToggle({
       title={name}
       onClick={() => toggle(weaponId, slot)}
       className={cn(
-        "group relative cursor-pointer border text-left transition-colors outline-none select-none",
+        "group relative cursor-pointer border text-left transition-[color,background-color,border-color,transform] outline-none select-none active:scale-[0.97]",
         "focus-visible:ring-[3px] focus-visible:ring-ring/60",
         checked
           ? "border-highlight/80 bg-highlight/10"

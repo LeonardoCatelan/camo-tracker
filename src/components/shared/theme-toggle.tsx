@@ -24,7 +24,14 @@ export function ThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        render={<Button variant="ghost" size="icon" aria-label="Alterar tema" />}
+        render={
+          <Button
+            variant="ghost"
+            size="icon"
+            className="size-10 sm:size-8"
+            aria-label="Alterar tema"
+          />
+        }
       >
         {/* Icons swap via CSS, so server and client markup match (no hydration mismatch). */}
         <Sun className="scale-100 rotate-0 transition-transform dark:scale-0 dark:-rotate-90" />
